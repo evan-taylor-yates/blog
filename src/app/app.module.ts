@@ -9,20 +9,20 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './in-memory-data.service';
 
 import { AppComponent } from './app.component';
-import { HeroDetailComponent } from './hero-detail.component';
-import { HeroesComponent } from './heroes.component';
+import { PostDetailComponent } from './post-detail.component';
+import { PostsComponent } from './posts.component';
 import { DashboardComponent } from './dashboard.component';
 
-import { HeroService } from './hero.service';
-import { HeroSearchComponent } from './hero-search.component';
+import { PostService } from './post.service';
+import { PostSearchComponent } from './post-search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeroDetailComponent,
-    HeroesComponent,
+    PostDetailComponent,
+    PostsComponent,
     DashboardComponent,
-    HeroSearchComponent
+    PostSearchComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +32,7 @@ import { HeroSearchComponent } from './hero-search.component';
     AppRoutingModule
   ],
   providers: [
-    HeroService
+    PostService
   ],
   bootstrap: [AppComponent]
 })

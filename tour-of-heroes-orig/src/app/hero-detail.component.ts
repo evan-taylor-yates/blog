@@ -2,8 +2,8 @@
 //
 // @Component({
 //   selector: 'app-hero-detail',
-//   templateUrl: './hero-detail.component.html',
-//   styleUrls: ['./hero-detail.component.css']
+//   templateUrl: './post-detail.component.html',
+//   styleUrls: ['./post-detail.component.css']
 // })
 // export class HeroDetailComponent implements OnInit {
 //

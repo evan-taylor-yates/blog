@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HeroSearchComponent } from '../hero-search.component';
+import { HeroSearchComponent } from '../post-search.component';
 
 describe('HeroSearchComponent', () => {
   let component: HeroSearchComponent;
