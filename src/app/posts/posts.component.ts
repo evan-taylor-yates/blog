@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Post } from './post';
-import { PostService } from './post.service';
+import { Post } from '../post/post';
+import { PostService } from '../post/post.service';
 import { Router } from '@angular/router';
 
 
@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'my-posts',
   templateUrl: './posts.component.html',
-  styleUrls: [ './posts.component.css' ]
+  styleUrls: ['./posts.component.css']
 })
 
 export class PostsComponent implements OnInit {
@@ -30,6 +30,9 @@ export class PostsComponent implements OnInit {
   }
   gotoDetail(): void {
     this.router.navigate(['/detail', this.selectedPost.id]);
+  }
+  createNewPost(): void {
+    this.router.navigate(['posts/new']);
   }
   add(name: string, attack: number): void {
     name = name.trim();

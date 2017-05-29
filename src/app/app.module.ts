@@ -6,30 +6,48 @@ import { AppRoutingModule } from './app-routing.module';
 
 // Imports for loading & configuring the in-memory web api
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService }  from './in-memory-data.service';
+import { InMemoryDataService } from './in-memory-data.service';
 
+// Root Component
 import { AppComponent } from './app.component';
-import { PostDetailComponent } from './post-detail.component';
-import { PostsComponent } from './posts.component';
-import { DashboardComponent } from './dashboard.component';
 
-import { PostService } from './post.service';
-import { PostSearchComponent } from './post-search.component';
+// Page Components (URL parent: "")
+import { DailyVomComponent } from './daily-vom/daily-vom.component';
+import { GorkedComponent } from './gorked/gorked.component';
+import { MyPageComponent } from './my-page/my-page.component';
+import { OldShitComponent } from './old-shit/old-shit.component';
+
+// Page Components (URL parent: "daily-vom/")
+import { NewPostComponent } from './new-post/new-post.component';
+import { EditPostComponent } from './edit-post/edit-post.component';
+import { PostDetailComponent } from './post-detail/post-detail.component';
+
+// Sub Components
+import { PostsComponent } from './posts/posts.component';
+import { PostSearchComponent } from './post-search/post-search.component';
+
+// Services
+import { PostService } from './post/post.service';
 
 @NgModule({
   declarations: [
     AppComponent,
+    DailyVomComponent,
+    GorkedComponent,
+    MyPageComponent,
+    OldShitComponent,
+    NewPostComponent,
+    EditPostComponent,
     PostDetailComponent,
     PostsComponent,
-    DashboardComponent,
-    PostSearchComponent
+    PostSearchComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    InMemoryWebApiModule.forRoot(InMemoryDataService),
-    AppRoutingModule
+    AppRoutingModule,
+    InMemoryWebApiModule.forRoot(InMemoryDataService)
   ],
   providers: [
     PostService

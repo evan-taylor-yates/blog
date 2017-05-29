@@ -9,7 +9,7 @@ import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/distinctUntilChanged';
 import { PostSearchService } from './post-search.service';
-import { Post } from './post';
+import { Post } from '../post/post';
 @Component({
   selector: 'post-search',
   templateUrl: './post-search.component.html',

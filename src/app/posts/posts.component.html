@@ -1,10 +1,6 @@
 <h2>My Posts</h2>
 <div>
-  <label>Post name:</label> <input #postName />
-  <label>Post attack:</label> <input #postAttack />
-  <button (click)="add(postName.value, postAttack.value); postName.value=''; postAttack.value=''">
-    Add
-  </button>
+  <button (click)="createNewPost()">New Post</button>
 </div>
 <ul class="posts">
   <li *ngFor="let post of posts" [class.selected]="post === selectedPost" (click)="onSelect(post)">
@@ -15,7 +11,16 @@
 </ul>
 <div *ngIf="selectedPost">
   <h2>
-    {{selectedPost.name | uppercase}} is my post
+    {{selectedPost.name}} is my post
   </h2>
   <button (click)="gotoDetail()">View Details</button>
 </div>
+
+
+<!--<div>-->
+  <!--<label>Post name:</label> <input #postName />-->
+  <!--<label>Post attack:</label> <input #postAttack />-->
+  <!--<button (click)="add(postName.value, postAttack.value); postName.value=''; postAttack.value=''">-->
+    <!--Add-->
+  <!--</button>-->
+<!--</div>-->
